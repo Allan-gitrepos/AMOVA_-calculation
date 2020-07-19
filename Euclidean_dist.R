@@ -81,14 +81,14 @@ euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.
     if(save){
       cat("Writing the Distance matrix to directory")
       if(is.null(type)){
-        save(x,file= "Distance_mat.R")
+        save(x,file= "Distance_mat.Rdata")
         write.csv(x, "Distance_mat.csv")
       }else if(type=="Rdata"){
         save(x,file= "Distance_mat.Rdata")
       }else if(type=="csv"){
         write.csv(x, "Distance_mat.csv")
       }else if (type=="both"){
-        save(x,file= "Distance_mat.R")
+        save(x,file= "Distance_mat.Rdata")
         write.csv(x, "Distance_mat.csv")
       }
     }

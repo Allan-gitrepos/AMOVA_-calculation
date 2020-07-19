@@ -1,3 +1,6 @@
+euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95, mono.rm=F){
+  
+ 
 #Function for calculating euclidean distances from DArTSeq 2row or 1row SNP data
 #Author   :Allan. V
 #Date     : 18 - July - 2020 
@@ -9,10 +12,8 @@
 #      real time output without exhausting memory.
 
 #      Use-case: Efficient when used for more than 500 individuals or samples
-
-
-
-euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95, mono.rm=F){
+  
+  
   
   cat("Loading the packages\n")
   if (!require("dartR")) install.packages("dartR")

@@ -12,7 +12,7 @@
 
 
 
-euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95, mono.rm=F){
+euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95, mono.rm=F, topskip = NULL){
   
   cat("Loading the packages\n")
   if (!require("dartR")) install.packages("dartR")
@@ -21,7 +21,7 @@ euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.
   if(is.null(data)){
     stop("Please provide a DArTSeq two row or one row SNP file")
   }
-  gl=gl.read.dart(paste(data))
+  gl=gl.read.dart(paste(data),topskip = topskip)
   cat("Filtering for call rate locus with threshold          :", callrate_loc, "\n")
   cat("Filtering for call rate individuals  with threshold   :", callrate_ind, "\n")
   cat("Filtering for reproducability of locus with threshold :", repavg, "\n")

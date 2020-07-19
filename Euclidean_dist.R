@@ -12,7 +12,7 @@
 
 
 
-euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95){
+euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.80 ,repavg=0.95, mono.rm=F){
   
   cat("Loading the packages\n")
   if (!require("dartR")) install.packages("dartR")

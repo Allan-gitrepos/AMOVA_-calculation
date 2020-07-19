@@ -26,9 +26,9 @@ euc_dis=function(data=NULL, save=T, type=NULL,callrate_ind=0.50, callrate_loc=0.
   cat("Filtering for call rate individuals  with threshold   :", callrate_ind, "\n")
   cat("Filtering for reproducability of locus with threshold :", repavg, "\n")
   
-  gl <- gl.filter.callrate(gl, method="ind", threshold = callrate_ind)
+  gl <- gl.filter.callrate(gl, method="ind", threshold = callrate_ind,mono.rm = F)
   gl <- gl.filter.repavg(gl, t=repavg)
-  gl<-gl.filter.callrate(gl, method="loc",t=callrate_loc)
+  gl<-gl.filter.callrate(gl, method="loc",t=callrate_loc, mono.rm = F)
   
   
   
